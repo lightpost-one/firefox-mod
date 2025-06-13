@@ -41,6 +41,7 @@ DIRS += [
     "extensions",
     "firefoxview",
     "genai",
+    "lpopanel",
     "messagepreview",
     "migration",
     "newtab",

@@ -246,6 +246,18 @@ let JSWINDOWACTORS = {
     enablePreference: "browser.aboutwelcome.enabled",
   },
 
+  LPO: {
+    parent: {
+      esModuleURI: "resource:///actors/LPOParent.sys.mjs",
+    },
+    child: {
+      esModuleURI: "resource:///actors/LPOChild.sys.mjs",
+    },
+    messageManagerGroups: ["browsers"],
+    matches: ["*://*"],
+    onlyFrameTypes: ["top"],
+  },
+
   BackupUI: {
     parent: {
       esModuleURI: "resource:///actors/BackupUIParent.sys.mjs",
@@ -421,7 +433,7 @@ let JSWINDOWACTORS = {
       esModuleURI: "resource:///actors/FormValidationChild.sys.mjs",
       events: {
         MozInvalidForm: {},
-        // Listening to ‘pageshow’ event is only relevant if an invalid form
+        // Listening to 'pageshow' event is only relevant if an invalid form
         // popup was open, so don't create the actor when fired.
         pageshow: { createActor: false },
       },

@@ -107,6 +107,9 @@
 
   <script src="chrome://browser/content/global-scripts.js"></script>
   <script src="chrome://browser/content/browser-main.js"></script>
+
+  <script src="chrome://browser/content/lpopanel/lposerve.sys.mjs" type="module"></script>
+  <script src="chrome://browser/content/lpopanel/lpoclient.bundle.mjs"></script>
 </head>
 <html:body xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
 # All sets except for popupsets (commands, keys, and stringbundles)
@@ -130,7 +133,7 @@
 
 #include navigator-toolbox.inc.xhtml
 
-#include browser-box.inc.xhtml
+#include ../../components/lpopanel/browser-canvas.inc.xhtml
 
   <html:template id="customizationPanel">
     <box id="customization-container" flex="1" hidden="true"><![CDATA[
